@@ -1,0 +1,35 @@
+<%# Паршиал дляотображения формы создания нового события %>
+<%= form_for(@event) do |f| %>
+  <%= render partial: 'partials/form_errors', locals: { model: @event } %>
+
+  <div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :address %>
+    <%= f.text_field :address, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :datetime %>
+    <p><%= f.datetime_select :datetime, class: 'form-control' %></p>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :description %>
+    <%= f.text_area :description, class: 'form-control' %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit 'Сохранить', class: 'btn btn-primary' %>
+    или
+    <%= link_to 'Удалить событие', @event, :method => :delete,
+                data:   { confirm: t('alert_destroy.event') },
+                class:  'buffer-both btn btn-danger' %>
+    <div>
+      <%= link_to 'Вернуться', root_url %>
+    </div>
+  </div>
+<% end %>

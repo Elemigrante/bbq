@@ -1,0 +1,33 @@
+<%= form_for @user, html: { multipart: true } do |f| %>
+
+  <%= render partial: 'partials/form_errors', locals: {model: @user} %>
+
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :email %>
+    <%= f.text_field :email, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :avatar %>
+      <p>
+        <%= image_tag(@user.avatar.thumb.url) if @user.avatar? %>
+      </p>
+    <%= f.file_field :avatar %>
+  </div>
+
+  <div class="actions text-center">
+    <%= f.submit 'Сохранить', class: 'btn btn-primary' %>
+    <%= link_to 'Удалить профиль', @user, :method => :delete,
+                data:   { confirm: t('alert_destroy.user') },
+                class:  'buffer-both btn btn-danger' %>
+    <div>
+      <%= link_to 'Вернуться', user_path %>
+    </div>
+  </div>
+
+<% end %>
