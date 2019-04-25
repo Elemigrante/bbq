@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'https://kebabjourney.herokuapp.com/'
+  default from: 'https://.herokuapp.com/'
   layout 'mailer'
 end
