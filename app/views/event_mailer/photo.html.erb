@@ -1,0 +1,16 @@
+<h1><%= t '.title' %></h1>
+
+<p><%= t '.author' %>: <b><%= @photo.user.name %></b></p>
+<hr/>
+
+<%= t '.event' %>
+<h3><%= @event.title %></h3>
+
+<%= t '.datetime' %>
+<h4><%= l @event.datetime, format: :short %></h4>
+
+<%= t '.owner' %>
+<h4><%= @event.user.name %></h4>
+<p>
+  <%= link_to 'Страница события', event_url(@event) %>
+</p>
