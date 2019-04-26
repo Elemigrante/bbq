@@ -61,7 +61,7 @@ Rails.application.configure do
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
-  #  # отправка почты по протоколу SMTP
+  # Отправка почты по протоколу SMTP
   config.action_mailer.delivery_method = :smtp
 
   # Настройки для работы через GMail аккаунт
