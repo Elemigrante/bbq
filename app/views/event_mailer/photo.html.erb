@@ -4,13 +4,13 @@
 <hr/>
 
 <%= t '.event' %>
-<h3><%= @event.title %></h3>
+<h2><%= @event.title %></h2>
 
 <%= t '.datetime' %>
-<h4><%= l @event.datetime, format: :short %></h4>
+<h3><%= l @event.datetime, format: :short %></h3>
 
 <%= t '.owner' %>
-<h4><%= @event.user.name %></h4>
+<h3><%= @event.user.name %></h3>
 <p>
   <%= link_to 'Страница события', event_url(@event) %>
 </p>
