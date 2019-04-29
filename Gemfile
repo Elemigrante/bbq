@@ -19,6 +19,7 @@ gem 'rmagick'
 gem 'fog-aws'
 
 gem 'figaro'
+
 group :production do
   gem 'pg'
 end
@@ -29,4 +30,5 @@ group :development, :test do
   gem 'listen'
   gem 'ruby-debug-ide'
   gem 'sqlite3', '~> 1.3.6'
+  gem 'letter_opener_web', '~> 1.3', '>= 1.3.4'
 end
