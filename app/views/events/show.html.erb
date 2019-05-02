@@ -26,17 +26,21 @@
             </div>
           <% end %>
         </div>
+        <div class="col-sm-12 col-md-12 col-lg-6 buffer-both">
+          <div id="map" data-address="<%= @event.address %>" style="height: 20vh;">
+          </div>
+        </div>
       </div>
     </div>
   </div>
   <!-- /.event-info row -->
-  <%= link_to 'Вернуться', events_path %>
+  <%= link_to 'Вернуться', events_path, class: 'btn btn-primary' %>
 
   <div class="row">
     <div class="col-md-8">
       <div class="event-photos">
         <div class="event-photos-gallery">
-          <%= render partial: 'photos/photo',
+          <%= render partial:    'photos/photo',
                      collection: @event.photos.except(@new_photo)
           %>
         </div>
