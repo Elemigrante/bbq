@@ -13,7 +13,10 @@ gem 'rails_12factor'
 
 gem 'twitter-bootstrap-rails'
 gem 'uglifier'
+gem 'coffee-rails', '~> 4.2'
+gem 'sass-rails'
 
+gem 'lightbox2-rails'
 gem 'carrierwave'
 gem 'rmagick'
 gem 'fog-aws'
