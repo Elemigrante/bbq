@@ -13,6 +13,7 @@
  *Подключаем сам файл application.css.
  *= require_tree .
  *= require_self
+ *= require lightbox-bootstrap
  */
 
 /*

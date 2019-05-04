@@ -13,5 +13,6 @@
 //= require jquery
 //= require rails-ujs
 //= require twitter/bootstrap
+//= require lightbox-bootstrap
 //= require action_cable
 //= require_tree .
