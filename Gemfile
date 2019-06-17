@@ -36,7 +36,9 @@ group :development, :test do
   gem 'ruby-debug-ide'
   gem 'sqlite3', '~> 1.3.6'
   gem 'letter_opener_web', '~> 1.3', '>= 1.3.4'
-  
+end
+
+group :development do
   gem 'capistrano', '~> 3.10', require: false
   gem 'capistrano-rails', '~> 1.3', require: false
   gem 'capistrano-bundler'
