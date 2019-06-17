@@ -1,9 +1,21 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.11.0"
 
-set :application, "kebabjourney"
+set :application, "kj"
 set :repo_url, "git@github.com:Elemigrante/bbq.git"
-set :deploy_to, '/home/deploy/apps/kebabjourney'
+set :deploy_to, '/home/deploy/apps/kj'
+
+set :log_level, :info
+# Копирующиеся файлы и директории (между деплоями)
+set :linked_files, %w{config/database.yml config/settings.yml}
+set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/uploads}
+
+# Ruby свистелки
+set :rbenv_type, :user
+set :rbenv_ruby, '2.5.0'
+set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_path)}/bin/rbenv exec"
+set :rbenv_roles, :all
+
 append :linked_files, 'config/database.yml', 'config/secrets_env.yml', '.env', '/config/application.yml'
 append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads'
 # Default branch is :master
