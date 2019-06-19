@@ -24,7 +24,7 @@ gem 'fog-aws'
 gem 'figaro'
 
 gem 'dotenv-rails'
-
+gem 'airbrussh'
 group :production do
   gem 'pg'
 end
