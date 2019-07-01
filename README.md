@@ -56,7 +56,3 @@ $ sudo aptitude install imagemagick libmagickwand-dev
 
 For correct work on Heroku URL must be changed in **config/environments/production.rb**
 Also must be changed configuration fo mailing SendGrid
-
-### Demo Heroku
-
-http://https://visitbbq.herokuapp.com/
