@@ -1,4 +1,4 @@
-## bbq 
+## BBQ - RUS
 Another name of app is Barbeque.
 
 ### Description
